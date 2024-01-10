@@ -1,0 +1,14 @@
+aapiVersion: v1
+kind: Pod
+metadata:
+  name: testpod
+spec:
+  containers:
+  - name: myapp
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo Hello-kubernetes; sleep 5; done"]
+  - name: myapp2
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo myapp2 is still running; sleep 3; done"]
+
+
